@@ -1,0 +1,14 @@
+{
+  "results": [
+    {
+      "description": "Test with an EPC with 34 characters",
+      "EPC": "FE001612881BAF0A7DEDF9D7F3B6000054",
+      "GTIN": null,
+      "DateType": "(11) Production",
+      "Date": null,
+      "FriendlyDate": null,
+      "LotCode": null,
+      "GTIN-128": null
+    }
+  ]
+}

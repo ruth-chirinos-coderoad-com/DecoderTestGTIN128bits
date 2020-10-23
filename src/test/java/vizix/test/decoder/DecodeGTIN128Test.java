@@ -49,7 +49,7 @@ public class DecodeGTIN128Test {
     @Test
     public void testEPC1() throws IOException, ParseException {
         JSONParser parser = new JSONParser();
-        Object obj = parser.parse(new FileReader("/resources/company/decode/DecodeExamples.json"));
+        Object obj = parser.parse(new FileReader("/resources/vizix/decode/DecodeExamples.json"));
         JSONObject jsonObject = (JSONObject) obj;
         JSONArray results = (JSONArray) jsonObject.get("results");
         results.stream().forEach(epc -> {
@@ -77,7 +77,7 @@ public class DecodeGTIN128Test {
     @Test
     public void testEPC2() throws IOException, ParseException {
         JSONParser parser = new JSONParser();
-        Object obj = parser.parse(new FileReader("/resources/company/decode/DecodeExamplesError.json"));
+        Object obj = parser.parse(new FileReader("/resources/vizix/decode/DecodeExamplesError.json"));
         JSONObject jsonObject = (JSONObject) obj;
         JSONArray results = (JSONArray) jsonObject.get("results");
         results.stream().forEach(epc -> {
@@ -106,7 +106,7 @@ public class DecodeGTIN128Test {
     @Test
     public void testEPC3() throws IOException, ParseException {
         JSONParser parser = new JSONParser();
-        Object obj = parser.parse(new FileReader("/resources/company/decode/DecodeExamplesError3.json"));
+        Object obj = parser.parse(new FileReader("/resources/vizix/decode/DecodeExamplesError3.json"));
         JSONObject jsonObject = (JSONObject) obj;
         JSONArray results = (JSONArray) jsonObject.get("results");
         results.stream().forEach(epc -> {
