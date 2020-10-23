@@ -9,10 +9,12 @@ import org.junit.Test;
 
 import java.io.FileReader;
 import java.io.IOException;
+import java.net.URL;
 import java.util.HashMap;
 
 public class DecodeGTIN128Test {
     public static HashMap<String, String> lstEPC = new HashMap<>();
+
 
     static {
         lstEPC.put("FE001612881BAF0A7DEDF9D7F3B60000", "0100023700047595172010151077989890");
@@ -30,6 +32,8 @@ public class DecodeGTIN128Test {
         lstEPC.put("FE0338A61DAEF9093CF9E0AFF36C0000", "0100885460003774132009071013579876");
         lstEPC.put("FE031BC79DDF1D090E3FCCFBE0310000", "0100854462003143132009011099215543");
         lstEPC.put("FE2757DE7840B5091615CCF6D9F30000", "0110814587015213132009021087210445");
+
+
     }
 
     @Test
@@ -45,7 +49,7 @@ public class DecodeGTIN128Test {
     @Test
     public void testEPC1() throws IOException, ParseException {
         JSONParser parser = new JSONParser();
-        Object obj = parser.parse(new FileReader("/home/rchirinos/devMojix/ViZix/JavaUtilities/src/test/resources/company/decode/DecodeExamples.json"));
+        Object obj = parser.parse(new FileReader("/resources/company/decode/DecodeExamples.json"));
         JSONObject jsonObject = (JSONObject) obj;
         JSONArray results = (JSONArray) jsonObject.get("results");
         results.stream().forEach(epc -> {
@@ -73,7 +77,7 @@ public class DecodeGTIN128Test {
     @Test
     public void testEPC2() throws IOException, ParseException {
         JSONParser parser = new JSONParser();
-        Object obj = parser.parse(new FileReader("/home/rchirinos/devMojix/ViZix/JavaUtilities/src/test/resources/company/decode/DecodeExamplesError.json"));
+        Object obj = parser.parse(new FileReader("/resources/company/decode/DecodeExamplesError.json"));
         JSONObject jsonObject = (JSONObject) obj;
         JSONArray results = (JSONArray) jsonObject.get("results");
         results.stream().forEach(epc -> {
@@ -102,7 +106,7 @@ public class DecodeGTIN128Test {
     @Test
     public void testEPC3() throws IOException, ParseException {
         JSONParser parser = new JSONParser();
-        Object obj = parser.parse(new FileReader("/home/rchirinos/devMojix/ViZix/JavaUtilities/src/test/resources/company/decode/DecodeExamplesError3.json"));
+        Object obj = parser.parse(new FileReader("/resources/company/decode/DecodeExamplesError3.json"));
         JSONObject jsonObject = (JSONObject) obj;
         JSONArray results = (JSONArray) jsonObject.get("results");
         results.stream().forEach(epc -> {
