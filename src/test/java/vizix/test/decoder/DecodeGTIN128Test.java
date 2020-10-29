@@ -49,7 +49,7 @@ public class DecodeGTIN128Test {
     @Test
     public void testEPC1() throws IOException, ParseException {
         JSONParser parser = new JSONParser();
-        Object obj = parser.parse(new FileReader("/resources/vizix/decode/DecodeExamples.json"));
+        Object obj = parser.parse(new FileReader("/home/rchirinos/devMojix/ViZix/DecoderTest/src/main/resources/vizix.decode/DecodeExamples.json"));
         JSONObject jsonObject = (JSONObject) obj;
         JSONArray results = (JSONArray) jsonObject.get("results");
         results.stream().forEach(epc -> {

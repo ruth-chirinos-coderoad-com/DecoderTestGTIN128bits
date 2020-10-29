@@ -3,7 +3,8 @@ package vizix.test.decoder;
 public class TestDecode {
     public static void main(String[] args){
         String[] epcList = {
-                "FE001612881BAF0A7DEDF9D7F3B60000",
+                "FE047DC7EC134306584711A118331EC5",
+                "FE001A1A658B09079847CD43E0600000"/*
                 "FE24A5A4FA49530A7DEDE6C3E0AD0000",
                 "FE24A5A52B0AF30A85EDE6C5EC5F0000",
                 "FE24A5A4FA026B0B0CF6D9F3CE160000",
@@ -17,7 +18,7 @@ public class TestDecode {
                 "FE031BC79DE071091E17F38EC04F0000",
                 "FE0338A61DAEF9093CF9E0AFF36C0000",
                 "FE031BC79DDF1D090E3FCCFBE0310000",
-                "FE2757DE7840B5091615CCF6D9F30000"};
+                "FE2757DE7840B5091615CCF6D9F30000"*/};
         DecodeGTIN128 decodeGTIN128 = new DecodeGTIN128();
         //String inputEPC = "FE001612881BAF0A7DEDF9D7F3B60000";
         for(String inputEPC : epcList){

@@ -151,6 +151,7 @@ public class DecodeGTIN128 {
         }
 
         // Lot
+        Character c = null;
         iniPosition = 17;
         endPosition = iniPosition + 3 ;
         val = Long.parseUnsignedLong(str2.substring(iniPosition, endPosition), 16);
@@ -178,11 +179,16 @@ public class DecodeGTIN128 {
             if(lot == 0){
                 break;
             }
-            str = str + R40Decode(lot / 1600);
+            c = R40Decode(lot / 1600);
+            str = str + c;
             lot = lot - (lot / 1600) * 1600;
-            str = str + R40Decode(lot / 40);
+            c = R40Decode(lot / 40);
+            str = str + c;
             lot = lot - (lot / 40) * 40;
-            str = str + R40Decode(lot);
+            c = R40Decode(lot);
+            if(c!=null){
+                str = str + c;
+            }
         }
         cxLotNum_Text = str;
         myChanged();
